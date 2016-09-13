@@ -49,6 +49,8 @@ kubectl exec -it <pod> -- bash -c 'EMAIL=fred@fred.com DOMAINS=example.com foo.e
  - SECRET_NAME - the name to save the secrets under.
  - NAMESPACE - the namespace under which the secrets should be available.
  - KUBECTL_ACCESS_SECURED - the flag to use or not the below variables. (e.g. value: "true" or "false")
- - CA_CERT_PATH , ADMIN_KEY_PATH , ADMIN_CERT_PATH - the absolutes path to files that are used by kubectl.
+ - CA_CERT_PATH , ADMIN_KEY_PATH , ADMIN_CERT_PATH - the absolute paths to files that are used by kubectl.
+    - This can be passed by secret, the path can be the path where you going to mount your secret volumes.
+    - Note: Absolute paths only.
  - CRON_FREQUENCY - the 5-part frequency of the cron job. Default is a random
    time in the range `0-59 0-23 1-27 * *`
