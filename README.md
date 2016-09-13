@@ -42,11 +42,13 @@ kubectl exec -it <pod> -- bash -c 'EMAIL=fred@fred.com DOMAINS=example.com foo.e
  - DOMAINS - a space separated list of domains to obtain a certificate for.
  - LETSENCRYPT_ENDPOINT
    - If set, will be used to populate the /etc/letsencrypt/cli.ini file with
-     the given server value. For testing use
+     the given server value. For testing use.
      https://acme-staging.api.letsencrypt.org/directory
  - DEPLOYMENTS - a space separated list of deployments whose pods should be
-   refreshed after a certificate save
- - SECRET_NAME - the name to save the secrets under
- - NAMESPACE - the namespace under which the secrets should be available
+   refreshed after a certificate save.
+ - SECRET_NAME - the name to save the secrets under.
+ - NAMESPACE - the namespace under which the secrets should be available.
+ - KUBECTL_ACCESS_SECURED - the flag to use or not the below variables. (e.g. value: "true" or "false")
+ - CA_CERT_PATH , ADMIN_KEY_PATH , ADMIN_CERT_PATH - the absolutes path to files that are used by kubectl.
  - CRON_FREQUENCY - the 5-part frequency of the cron job. Default is a random
    time in the range `0-59 0-23 1-27 * *`
