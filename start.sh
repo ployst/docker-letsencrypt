@@ -29,7 +29,7 @@ fi
 
 # The process that identify and setup the admin-key to KUBECTL
 # Note: This PATHS's has to be absolutes.
-if [ -n "${KUBECTL_ACCESS_SECURED+1}" ] && [ "${KUBECTL_ACCESS_SECURED,,}" = "true" ] && []; then
+if [ -n "${KUBECTL_ACCESS_SECURED+1}" ] && [ "${KUBECTL_ACCESS_SECURED,,}" = "true" ]; then
   echo "Configuring KUBECTL keys..."
   echo "MASTER_HOST : ${MASTER_HOST}"
   echo "CA_CERT_PATH : ${CA_CERT_PATH}"
