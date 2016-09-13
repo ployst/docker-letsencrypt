@@ -32,7 +32,7 @@ fi
 if [ -n "${KUBECTL_ACCESS_SECURED+1}" ] && [ "${KUBECTL_ACCESS_SECURED,,}" = "true" ] && []; then
   echo "Configuring KUBECTL keys..."
   echo "MASTER_HOST : ${MASTER_HOST}"
-    echo "CA_CERT_PATH : ${CA_CERT_PATH}"
+  echo "CA_CERT_PATH : ${CA_CERT_PATH}"
   echo "ADMIN_KEY_PATH : ${ADMIN_KEY_PATH}"
   echo "ADMIN_CERT_PATH : ${ADMIN_CERT_PATH}"
 
