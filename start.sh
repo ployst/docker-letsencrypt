@@ -40,6 +40,8 @@ if [ -n "${KUBECTL_ACCESS_SECURED+1}" ] && [ "${KUBECTL_ACCESS_SECURED,,}" = "tr
   kubectl config set-credentials default-admin --certificate-authority=${CA_CERT} --client-key=${ADMIN_KEY} --client-certificate=${ADMIN_CERT}
   kubectl config set-context default-system --cluster=default-cluster --user=default-admin
   kubectl config use-context default-system
+
+ echo "KUBECTL: OK!"
 fi
 
 # Start cron
