@@ -37,7 +37,7 @@ if [ -n "${KUBECTL_ACCESS_SECURED+1}" ] && [ "${KUBECTL_ACCESS_SECURED,,}" = "tr
   echo "ADMIN_CERT_PATH : ${ADMIN_CERT_PATH}"
 
   kubectl config set-cluster default-cluster --server=https://${MASTER_HOST} --certificate-authority=${CA_CERT_PATH}
-  Ckubectl config set-credentials default-admin --certificate-authority=${CA_CERT_PATH} --client-key=${ADMIN_KEY_PATH} --client-certificate=${ADMIN_CERT_PATH}
+  kubectl config set-credentials default-admin --certificate-authority=${CA_CERT_PATH} --client-key=${ADMIN_KEY_PATH} --client-certificate=${ADMIN_CERT_PATH}
   kubectl config set-context default-system --cluster=default-cluster --user=default-admin
   kubectl config use-context default-system
 
