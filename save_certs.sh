@@ -43,6 +43,7 @@ cat << EOF | kubectl $ACTION -f -
    "tls.crt": "$CERT",
    "tls.key": "$KEY",   
    "dhparam": "$DHPARAM"
- }
+ },
+ "type": "$TYPE"
 }
 EOF
