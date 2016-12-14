@@ -48,5 +48,6 @@ kubectl exec -it <pod> -- bash -c 'EMAIL=fred@fred.com DOMAINS=example.com foo.e
    refreshed after a certificate save
  - SECRET_NAME - the name to save the secrets under
  - NAMESPACE - the namespace under which the secrets should be available
+ - TYPE - the type of the secrets (default is Opaque)
  - CRON_FREQUENCY - the 5-part frequency of the cron job. Default is a random
    time in the range `0-59 0-23 1-27 * *`
