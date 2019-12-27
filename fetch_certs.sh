@@ -24,4 +24,4 @@ done
     --webroot -w /letsencrypt/challenges/ \
     --text --renew-by-default --agree-tos \
       $domain_args \
-     --email=$EMAIL
+     --email=$EMAIL --no-eff-email
